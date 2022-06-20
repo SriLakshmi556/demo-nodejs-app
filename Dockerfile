@@ -16,7 +16,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 #Copy package.json in the image
 COPY package.json ./
 
-
+RUN curl -v https://registry.npmjs.com/
 #Run npm install command
 RUN npm install
 RUN npm install pm2 -g
